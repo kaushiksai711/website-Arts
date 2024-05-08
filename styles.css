@@ -20,7 +20,7 @@
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space items evenly */
 }
-.card-body{background:url("D:\\pics_web\\backabt.jpg") ;background-size:cover;
+.card-body{background:url("backabt.jpg") ;background-size:cover;
   background-position:center;padding: 20px;
   
   border:solid 6px #343a40 }
@@ -28,7 +28,7 @@
   flex: 1; /* Equal width for each product */
   margin-right: 20px; /* Add some space between products */
 }
-#A{background:url("D:\\pics_web\\backabt.jpg") ;background-size:cover;
+#A{background:url("backabt.jpg") ;background-size:cover;
   background-position:center;
 padding: 20px;
 margin:30px;
