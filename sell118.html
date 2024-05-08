@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script0.js"></script>
+</head>
+<body id="body" >
+  <header>
+    <h1>Welcome to My E-commerce Website</h1>
+  </header>
+  <div id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navi">
+    <a class="navbar-brand" href="sitee118'.html">Arts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="sitee118'.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutt118.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="buy118.html">Buy arts</a>
+            <a class="dropdown-item" href="sell118.html">Sell Arts</a>
+            
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contactus118.html">Contact Us</a>
+          </li>
+      </ul>
+      <div class="cart-button">
+        <a href="cart.html">
+            <img src="C:\Users\tanvi\Downloads\icons8-shopping-cart-24.png" alt="Shopping Cart">
+            <span class="cart-count">3</span> <!-- This is the cart count, you can dynamically update it with JavaScript -->
+        </a>
+    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<div id="data-to-sell" class="card" style="margin: auto; align-self:center; width: 1000px;">
+    <form id="sell-form">
+      <div class="card-body" style="background-color: antiquewhite;">
+        <label for="title">Title  <br>
+          <input type="text" id="title" required></label><br>
+
+        <label for="Artist">Artist <br>
+          <input type="text" id="Artist" required></label><br>
+        <label for="Description">Description <br>
+          <input type="text" required id="Description"></label><br>
+        <label for="Price">Price  <br>
+          <input type="text" required id="Price"></label><br>
+        <label for="art_or_craft">
+          Art    <input type="radio" id="art_or_craft_art" name="art_or_craft" >
+          Craft    <input type="radio" id="art_or_craft_craft" name="art_or_craft" >
+        </label><br>
+        <div class="input-group">
+          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        </div>
+        <label for="submit">
+          <input type="submit" id="submit" type="button">
+        </label><br>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#sell-form').submit(function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
+        // Retrieve form data
+        var title = $('#title').val();
+        var artist = $('#Artist').val();
+        var description = $('#Description').val();
+        var price = $('#Price').val();
+        var type = $('input[name="art_or_craft"]:checked').val();
+        var file = $('#inputGroupFile04').val(); // Assuming you want to handle file upload
+        
+        // Display confirmation box
+        var confirmation = confirm('Are you sure you want to submit this data?');
+        
+        // If user confirms, proceed with submission
+        if (confirmation) {
+          // Perform your submission logic here
+          // For example, you can use AJAX to send the form data to your server
+          // Once submission is successful, you can display a success message to the user
+          alert('Form submitted successfully!');
+        } else {
+          // If user cancels, do nothing or provide feedback
+          alert('Form submission canceled.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website - Signup</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body id="body" >
+  <header>
+    <h1>Welcome to My E-commerce Website</h1>
+  </header>
+  <div id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navi">
+    <a class="navbar-brand" href="sitee118'.html">Arts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="sitee118'.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutt118.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Login/Signup</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="buy118.html">Buy arts</a>
+            <a class="dropdown-item" href="sell118.html">Sell Arts</a>
+            
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contactus118.html">Contact Us</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+    <main>
+        <div class="container">
+            <div class="links">
+                <h2 class="l1"><a href="index.html">Login</a></h2>
+                <h2 class="l2"><a href="signup.html">Signup</a></h2>
+            </div>
+            <form id="Signup" class="card-body" onsubmit="return validateForm()">
+                <div class="signup">
+                    <p>
+                        Name:&nbsp;
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </p>
+                    <p>
+                        Gender:&nbsp;
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </p>
+                    <p>
+                        Email:&nbsp;
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </p>
+                    <p>
+                        Mobile No.:&nbsp;
+                        <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" required>
+                    </p>
+                    <br>
+                    <p>
+                        Username:&nbsp;
+                        <input type="text" name="username" id="username" placeholder="Enter a username" required>
+                    </p>
+                    <p>
+                        Password:&nbsp;
+                        <input type="password" name="password" id="password" placeholder="Enter a password" required>
+                    </p>
+                    <p>
+                        Confirm Password:&nbsp;
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" required>
+                    </p>
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+
+            // Check if passwords match
+            if (password !== confirm_password) {
+                alert("Passwords do not match");
+                return false; // Prevent form submission
+            }
+            alert('Successfully Signed Up')
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
